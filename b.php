@@ -46,7 +46,7 @@
     foreach( $rows as $row ) { 
 	$var = '"'.$row['value'].'"';
     print "<tr>
-	<td> <a href='#' onclick='functionSendLabel(" .$var. ")' value='Show alert box' >" . $row['value']."</a>
+	<td> " . $row['value']."
 	</td>";}
     echo "</table>" 
 

@@ -47,7 +47,7 @@
 	$var = '"'.$row['resource'].'"';
     print "<tr>
 	<td>".++$id. "</td>
-	<td> <a href='#' onclick='functionSendLabel(" .$var. ")' value='Show alert box' >" . $row['label']."</a>
+	<td> <a href='javascript:void(0);' onclick='functionSendLabel(" .$var. ")' value='Show alert box' >" . $row['label']."</a>
 	</td>"  
     ;
     }
