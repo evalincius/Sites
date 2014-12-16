@@ -21,46 +21,83 @@ $(document).ready(function() {
         <div id="main">
         <div id="banner"></div>
         <div class="center">
+        <form onSubmit="myFunction(); return false;" class="inputtxt"> 
+        	<div id="inputbox">
+            <p><b>Start typing a name in the input field below:</b></p>
+			<b>Movie Title:</b> <input type="text" onkeyup="showHint(this.value)">
+            </div>
+		</form>
           <div id="texts">
-            
            	  <div class="text2">
-                <h1> About us </h1>
-                <div class="enter" >
-                
-              
-           <p> GadgetFreaks is designed to provide up to the minute daily technology news on the latest advances in the technology sector including software, hardware and gadgets from the greatest manufacturers such as:</p>
-		   <ul>
-			<li>Stark Industries</li>
-			<li>Lightsaber Inc.</li>
-			<li>Aperture Science Labs</li>		   
-		   </ul><br/>
-		   
-		   
-		   <p>Geeky Gadgets features in-depth reviews on the latest devices with impartial coverage of the features and developments of new technology.</p><br/>
-<p>As well as reporting on the latest tech and gadgets the editorial team are always willing to create their own concepts and even create working prototypes to see a concepts through to design, with a number of designs created from the simplest of materials becoming viral on the web.</p><br/>
+                <h1> Movies </h1>
+                <div style='overflow:scroll; width:400px;height:380px;'class="enter" >
+  		   <script>
+				function showHint(str) {
+    			 if (str.length == 0) { 
+        			 document.getElementById("txtHint").innerHTML = "";
+     	   		 return;
+   				  } else {
+       			  var xmlhttp = new XMLHttpRequest();
+        			 xmlhttp.onreadystatechange = function() {
+           			  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+           		      document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+
+					  
+           		  }
+         		}
+        		 xmlhttp.open("GET", "a.php?q="+str, true);
+        		 xmlhttp.send();
+    		 }
+			}
+			</script>
+            <script LANGUAGE="JavaScript">
+			function myFunction() {
+			}
+			</script>
+            
+
+  		   <br/>
 
 
-
-
-				</div>
+			<p> <div id="txtHint">List Of Movies Will Appear There</div></p>
+		
+				
+  				</div>
                </div>
             
             
             </div>
             <div id="gad">
-            <div class="title">
-            <h1>Gadgets Of The Month </h1></div>
-            <div id="accordion" >
-        <h3><a href="#">Personal Space Shuttle</a></h3>
-	<div>
-    <div class="pict"><img src="Images/nasa.jpg" width="116" height="122" alt="pav" /></div>
-    <div class="txtas">
-	<p>Price: available upon application</p>
-	<p>Manufacturer: Stark Industries</p><br/>
-	<p>
-Make that daily commute to Mars a much more comfortable and enjoyable experience with your own personal space shuttle. The tried and tested design is based on that originally produced by NASA; their shuttles flew over 135 missions between 1981 and 2011, so you can be sure of owning a reliable craft.
-</p>
+            <script>
+				function functionSendLabel(str) {
+				//alert(str); // this is the message in ""
 
+    			 if (str.length == 0) { 
+        			 document.getElementById("txtHint2").innerHTML = "";
+     	   		 return;
+   				  } else {
+       			  var xmlhttp = new XMLHttpRequest();
+        			 xmlhttp.onreadystatechange = function() {
+           			  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+           		      document.getElementById("txtHint2").innerHTML = xmlhttp.responseText;
+
+					  
+           		  }
+         		}
+        		 xmlhttp.open("GET", "b.php?q="+str, true);
+        		 xmlhttp.send();
+    		 }
+			}
+	</script>
+            <div class="title">
+            <h1><p> <div id="txtHint2">Movie Title</div></p></h1></div>
+            <div id="accordion" >
+        <h3><a href="#">tba</a></h3>
+	<div>
+    <div class="txtas">
+	
+
+	<p> <div id="txtHint2"></div></p>
 
 
 

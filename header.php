@@ -13,9 +13,9 @@
         
         		<ul>
         		<li><a href="index.php">Home</a></li>
-            	<li><a href="gadgets.php">Gadgets</a></li>
-            	<li><a href="manufactures.php">Manufactures</a></li>
-            	<li><a href="contact.php">Contact us</a></li>
+            	<li><a >Search </a></li>
+            	<li><a >Ratings</a></li>
+            	<li><a >Watched</a></li>
         
         
        			 </ul>

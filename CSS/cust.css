@@ -4,17 +4,54 @@ a { text-decoration: none; }
 
 
 #up{width: 100%; height: 180px; background:url(../Images/gold&black/images/navbar.png) repeat-x;}
-.grid {width:100%; float:left;}
-.grid ul {margin:0 0 0 400px;}
-.grid li {display: inline;}
+.grid {margin-left:auto; margin-right:auto; width:1160px; }
+.grid ul {margin-left:200px; margin-right:200px;}
+.grid li {display: inline; }
 .grid li a { display: block; float: left; height: 40px; padding: 15px 20px 0 20px; color: #bcad72; font-family: "Times New Roman", Times, serif; font-size: 25px;}
 .grid li.activ a {color: #ffffff; } 
 .grid li a:hover {color: #d3f537;}
-.img { width: 50%; height: 103px; background: url(../Images/gold&black/images/navbarimg.png) no-repeat; float:left;}
 
+#main {margin-left:auto; margin-right:auto; box-shadow: 5px 5px 10px #000000;  width: 1160px; min-height: 900px; background-color: #e5e4dc; border:solid; border-color: black black black black; border-width: 2px 2px 2px 2px; margin-top: 30px; margin-bottom: 30px;}
+.inputtxt {width: 500px; margin-left:auto; margin-right:auto;}
+#inputbox {width: 400px;text-align:center;font-size: 1.3em;}
 
-#main {box-shadow: 5px 5px 10px #000000;  width: 1160px; min-height: 900px; background-color: #e5e4dc; border:solid; border-color: black black black black; border-width: 2px 2px 2px 2px; margin-left: 100px; margin-top: 30px; margin-bottom: 30px;}
-#banner {width: 100%; height: 254px; float: left; background:url(../Images/gold&black/images/banner_06.png) center no-repeat; margin: 35px 0 0 0; }
+#txtHint{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#txtHint table{
+	border:1px solid black;
+    width: inherit;
+    margin: 0 auto;
+}
+
+#txtHint table h1{
+    text-align: center;
+	border:1px solid black;
+}
+
+#txtHint table td{
+	border:1px solid black;
+    padding: 10px;
+}
+#txtHint table td a {
+display:block;
+text-decoration:none; 
+}
+/**link states**/
+#txtHint table td a:link {color: #000}
+#txtHint table td a:visited {color:#666}
+#txtHint table td a:visited:after {content:" (" attr(href) ")";font-size:90%;}
+#txtHint table td a:hover, #txtHint table td a:active, #txtHint table td a:focus {
+	background-color: #FFCC00
+}
+form input{
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
 
 .center {margin-left:auto; margin-right:auto; width:1160px; min-height: 200px;}
 #texts { box-shadow: 0 1px 10px #000000; width: 490px; height: 500px; float: left; border:solid; border-color: black black black black; border-width: 1px 1px 1px 1px; background-color: #ffffff;  margin-left: 80px ; margin-top: 50px;
@@ -23,7 +60,7 @@ a { text-decoration: none; }
 .text2 h1 {margin: 0 130px;}
 .enter {margin: 20px 0 0 0; padding: 5px;  text-align: justify;}
 
-#gad {width: 490px; height: 467px; margin: 50px 0 0 25px; float: left;    border:solid; border-color: black black black black; border-width: 1px 1px 1px 1px; background-color: #ffffff; margin-left: 50px; box-shadow: 0 1px 10px #000000; }
+#gad {width: 490px; height: 467px; margin: 50px 0 0 25px; float: left;   border:solid; border-color: black black black black; border-width: 1px 1px 1px 1px; background-color: #ffffff; margin-left: 50px; box-shadow: 0 1px 10px #000000; }
 #accordion {margin: 18px 0 0 0;}
 .title {margin: 16px 0 0 80px;}
 

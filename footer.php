@@ -5,9 +5,9 @@
 				<div class="a">Navigation</div>
         		<ul>				
         		<li><a href="index.php">Home</a></li>
-            	<li><a href="gadgets.php">Gadgets</a></li>
-            	<li><a href="manufactures.php">Manufactures</a></li>
-            	<li><a href="contact.php">Contact us</a></li>
+            	<li><a >Search </a></li>
+            	<li><a >Ratings </a></li>
+            	<li><a >Watched </a></li>
 				</ul>
          	</div>
 			</div>
@@ -21,7 +21,7 @@
 					<div class="twitter"><a href="https://twitter.com/EValincius" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @EValincius</a></div>
         
 			</div>
-			<div class="copyright"> Copyright © 2012 Edgaras Valincius Inc. All rights reserved</div>
+			<div class="copyright"> Copyright © 2014 Edgaras Valincius Inc. All rights reserved</div>
 			
        </div>
    </div>

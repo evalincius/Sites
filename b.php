@@ -3,7 +3,7 @@
  
   <?php
   $q = $_REQUEST["q"];
-  $a = '"'.$q.'"';
+  $a = '<'.$q.'>';
   /* ARC2 static class inclusion */ 
   include_once('semsol/ARC2.php');  
  
@@ -22,10 +22,11 @@
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX dc: <http://purl.org/dc/terms/>
 
-    SELECT ?label?resource WHERE {
-      ?resource mdb:id ?uri .
-      ?resource dc:title ?label . 
-      FILTER regex(?label," .$a. ")}";
+    SELECT ?value
+	WHERE {
+		".$a." dc:title ?value
+	 }
+	ORDER BY ?value";
   
   /* execute the query */
   $rows = $store->query($query, 'rows'); 
@@ -38,19 +39,15 @@
     /* display the results in an HTML table */
     echo "<table border='4'>
     <thead>
-        <th>#</th>
-        <th>Title</th>
+        <th></th>
     </thead>";
 
     /* loop for each returned row */
     foreach( $rows as $row ) { 
-	$var = '"'.$row['resource'].'"';
+	$var = '"'.$row['value'].'"';
     print "<tr>
-	<td>".++$id. "</td>
-	<td> <a href='#' onclick='functionSendLabel(" .$var. ")' value='Show alert box' >" . $row['label']."</a>
-	</td>"  
-    ;
-    }
+	<td> <a href='#' onclick='functionSendLabel(" .$var. ")' value='Show alert box' >" . $row['value']."</a>
+	</td>";}
     echo "</table>" 
 
   ?>
