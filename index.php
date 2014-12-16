@@ -92,21 +92,40 @@ $(document).ready(function() {
             <div class="title">
             <h1><p> <div id="txtHint2">Movie Title</div></p></h1></div>
             <div id="accordion" >
-        <h3><a href="#">tba</a></h3>
+        <h3><a href="#">About Movie</a></h3>
 	<div>
     <div class="txtas">
-	
+		<script>
+				function getInfoAboutMovie(str) {
+				//alert(str); // this is the message in ""
 
-	<p> <div id="txtHint2"></div></p>
+    			 if (str.length == 0) { 
+        			 document.getElementById("txtHint3").innerHTML = "";
+     	   		 return;
+   				  } else {
+       			  var xmlhttp = new XMLHttpRequest();
+        			 xmlhttp.onreadystatechange = function() {
+           			  if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+           		      document.getElementById("txtHint3").innerHTML = xmlhttp.responseText;
 
+					  
+           		  }
+         		}
+        		 xmlhttp.open("GET", "c.php?q="+str, true);
+        		 xmlhttp.send();
+    		 }
+			}
+	</script>
+
+	<div id="txtHint3">TESTING...</div>
 
 
 </div>
 	</div>       
             
-	<h3><a href="#">Lightsaber</a></h3>
+	<h3><a href="#">Actors</a></h3>
 	<div>
-    <div class="pict"><img src="Images/Kalin__s_Jedi_Lightsaber_by_Cascador.jpg" width="116" height="122" alt="pav" /></div>
+    <div class="pict"></div>
     <div class="txtas">
 	<p>Price: £9999.99</p>
 	<p>Manufacturer: Lightsaber Inc</p><br/>
@@ -119,7 +138,7 @@ The ultimate cheese cutter! Stolen from the Star Wars universe, a the lightsaber
      
 	 
             
-    <h3><a href="#">Teleporter</a></h3>
+    <h3><a href="#">Similar Movies</a></h3>
 	<div>
     <div class="pict"><img src="Images/teleport.jpg" width="116" height="122" alt="pav" /></div>
     <div class="txtas">

@@ -47,7 +47,7 @@
 	$var = '"'.$row['resource'].'"';
     print "<tr>
 	<td>".++$id. "</td>
-	<td> <a href='javascript:void(0);' onclick='functionSendLabel(" .$var. "); getInfoAboutMovie(" .$a. ")' value='Show alert box' >" . $row['label']."</a>
+	<td>" . $row['label']."</a>
 	</td>"  
     ;
     }
